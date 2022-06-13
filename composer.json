@@ -8,6 +8,13 @@
             "Drenth1\\TailwindIntegration\\": "src/"
         }
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Drenth1\\TailwindIntegrationServiceProvider"
+            ]
+        }
+    },
     "authors": [
         {
             "name": "Joey Drenth",
