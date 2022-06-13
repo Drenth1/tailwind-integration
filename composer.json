@@ -1,0 +1,19 @@
+{
+    "name": "drenth1/tailwind-integration",
+    "description": "TailwindCSS integration for Laravel packages.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Drenth1\\TailwindIntegration\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Joey Drenth",
+            "email": "drenthjoey@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
