@@ -3,6 +3,7 @@
 namespace Drenth1\TailwindIntegration;
 
 use Illuminate\Support\ServiceProvider;
+use Drenth1\TailwindIntegration\Console\IntegrateCommand;
 
 class TailwindIntegrationServiceProvider extends ServiceProvider
 {
@@ -23,6 +24,11 @@ class TailwindIntegrationServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        // Register artisan console commands.
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                IntegrateCommand::class,
+            ]);
+        }
     }
 }
