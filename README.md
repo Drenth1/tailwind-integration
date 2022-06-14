@@ -41,7 +41,7 @@ vendor/yourpackage/resources/css => resources/css
 vendor/yourpackage/resources/js => resources/js
 
 vendor/yourpackage/resources/tailwind.config.js => tailwind.config.js
-vendor/yourpackage/resources/webpack.config.js => webpack.config.js
+vendor/yourpackage/resources/webpack.mix.js => webpack.mix.js
 ```
 
 If you require specific behaviour, you may overwrite the `handle()` function and make use of the `AssetMover` utility class.

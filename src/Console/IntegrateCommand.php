@@ -43,7 +43,7 @@ class IntegrateCommand extends Command
         NodePackageManager::add();
 
         AssetMover::moveAsset($dir . '/resources/tailwind.config.js', base_path('tailwind.config.js'));
-        AssetMover::moveAsset($dir . '/resources/webpack.config.js', base_path('webpack.config.js'));
+        AssetMover::moveAsset($dir . '/resources/webpack.mix.js', base_path('webpack.mix.js'));
 
         AssetMover::moveAssetDirectory($dir . '/resources/css', resource_path('css'));
         AssetMover::moveAssetDirectory($dir . '/resources/js', resource_path('js'));
