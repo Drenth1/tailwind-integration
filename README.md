@@ -85,3 +85,15 @@ You can run the command by using artisan.
 ```
 php artisan my:command
 ```
+
+## ⚙️ Tailwind config
+
+For Tailwind purge to work correctly, you need to add the path to your views to your `tailwind.config.js` `content` key.
+
+```js
+content: [
+    './vendor/package/resources/views/*.blade.php',
+    // ... other paths
+],
+```
+
