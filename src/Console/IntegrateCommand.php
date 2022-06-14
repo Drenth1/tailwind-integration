@@ -27,7 +27,7 @@ class IntegrateCommand extends Command
      * 
      * @var string
      */
-    protected static string $parent_package = 'drenth1/tailwind-integration';
+    protected string $parent_package;
 
     /**
      * Execute the console command.
@@ -38,7 +38,7 @@ class IntegrateCommand extends Command
     {
         $this->info('Running Tailwind integration.');
         
-        $dir = self::packageDir();
+        $dir = $this->packageDir();
 
         NodePackageManager::add();
 
@@ -57,8 +57,8 @@ class IntegrateCommand extends Command
      * 
      * @return string
      */
-    protected static function packageDir()
+    protected function packageDir()
     {
-        return base_path('vendor/') . self::$parent_package;
+        return base_path('vendor/') . $this->parent_package;
     }
 }

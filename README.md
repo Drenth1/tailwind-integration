@@ -36,7 +36,7 @@ class MyCommand extends IntegrateCommand
      * 
      * @var string
      */
-    protected static string $parent_package = 'vendor/package';
+    protected string $parent_package = 'vendor/package';
 }
 ```
 
@@ -74,7 +74,7 @@ If you require specific behaviour, you may overwrite the `handle()` function and
 
 ```php
 // Gets the path to your package in the vendor folder.
-$dir = self::packageDir();
+$dir = $this->packageDir();
 
 AssetMover::moveAsset($dir . '/resources/css/app.css', $destination);
 AssetMover::moveAssetDirectory($dir . '/resources/js', $destination);
@@ -83,5 +83,5 @@ AssetMover::moveAssetDirectory($dir . '/resources/js', $destination);
 You can run the command by using artisan.
 
 ```
-php artisan tailwind:integrate
+php artisan my:command
 ```
