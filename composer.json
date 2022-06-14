@@ -11,7 +11,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Drenth1\\TailwindIntegrationServiceProvider"
+                "Drenth1\\TailwindIntegration\\TailwindIntegrationServiceProvider"
             ]
         }
     },
