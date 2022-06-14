@@ -15,7 +15,10 @@ class AssetMover
      */
     public static function moveAsset(string $source, string $destination) : void
     {
-        copy($source, $destination);
+        if((new Filesystem)->isFile($source)) 
+        {
+            copy($source, $destination);
+        }
     }
 
     /**
@@ -27,6 +30,9 @@ class AssetMover
      */
     public static function moveAssetDirectory(string $source, string $destination) : void
     {
-        (new Filesystem)->copyDirectory($source, $destination);
+        if((new Filesystem)->isDirectory($source)) 
+        {
+            (new Filesystem)->copyDirectory($source, $destination);
+        }
     }
 }
