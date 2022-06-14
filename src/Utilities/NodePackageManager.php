@@ -7,13 +7,17 @@ class NodePackageManager
     /**
      * Add new node dependencies.
      * 
-     * @param array $packages
      * @return void
      */
-    public static function addNodePackages(array $addons)
+    public static function add()
     {
-        $this->updateNodeDependencies(function ($packages) {
-            return $addons + $packages;
+        self::updateNodeDependencies(function ($packages) {
+            return [
+                '@tailwindcss/forms' => '^0.4.0',
+                'autoprefixer' => '^10.4.2',
+                'postcss' => '^8.4.6',
+                'tailwindcss' => '^3.1.0',
+            ] + $packages;
         });
     }
 
