@@ -25,11 +25,37 @@ use Drenth1\TailwindIntegration\Console\IntegrateCommand;
 class MyCommand extends IntegrateCommand
 {
     /**
+     * The name and signature of the console command.
+     * 
+     * @var string
+     */
+    protected $signature = 'my:command';
+
+    /**
      * The package to integrate with.
      * 
      * @var string
      */
     protected static string $parent_package = 'vendor/package';
+}
+```
+
+Register the console command in your package's serviceprovider.
+
+```php
+<?php
+
+namespace Vendor\Package;
+
+use Vendor\Package\Console\MyCommand;
+
+public function boot()
+{
+    if ($this->app->runningInConsole()) {
+        $this->commands([
+            MyCommand::class,
+        ]);
+    }
 }
 ```
 
