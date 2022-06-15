@@ -3,6 +3,10 @@
 This package allows you to easily integrate TailwindCSS in your Laravel package. It allows you to have Tailwind styled views
 and components without the need to publish them to the main Laravel project. The only published files are the CSS and JS assets.
 
+[![Latest Stable Version](http://poser.pugx.org/drenth1/tailwind-integration/v)](https://packagist.org/packages/drenth1/tailwind-integration)
+[![Total Downloads](http://poser.pugx.org/drenth1/tailwind-integration/downloads)](https://packagist.org/packages/drenth1/tailwind-integration)
+[![License](http://poser.pugx.org/drenth1/tailwind-integration/license)](https://packagist.org/packages/drenth1/tailwind-integration)
+
 ## 🛠️ Installation
 
 Tailwind integration can be installed through Composer.
